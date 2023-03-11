@@ -9,24 +9,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <form id="form">
-            <fieldset>
-                <legend>Form</legend>
-                <label for="name">Name</label><br>
-                <input type="text" placeholder="Full Name" required id="name"><br><br>
-                <label for="email">Email</label><br>
-                <input type="email" placeholder="Email Address" required id="email"><br><br>
-                <label for="phone">Phone</label><br>
-                <input type="tel" placeholder="Phone Number" required id="phone"><br><br>
-                <label for="dob">DOB</label><br>
-                <input type="date" placeholder="mmm/dd/yyyy" required id="dob"><br><br>
-                <label for="password">Password</label><br>
-                <input type="password" placeholder="Enter Password" required id="password"><br><br>
-                <input type="button" value="Submit" onclick="checkForm()" id="submit">
-            </fieldset>
-        </form>
+   
+        <section class ="formclass">
+            <div class="form_div">
+                <form id="form">
+                    <label  for="name">Name</label><br>
+                    <input type="text" placeholder="Full Name" required id="name"><br><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" placeholder="Email Address" required id="email"><br><br>
+                    <label for="phone">Phone</label><br>
+                    <input type="tel" placeholder="Phone Number" required id="phone"><br><br>
+                    <label for="gender">Gender</label><br>
+                    <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="male">Female</option>
+                    </select><br><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" placeholder="Enter Password" required id="password"><br><br>
+                    <input type="button" value="Submit" onclick="checkForm()" id="submit">
+               
+            </form> 
+            </div>
+       
     </section>
+
+   
 
 </body>
 </html>
