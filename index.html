@@ -1,14 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="script.js"></script>
+    <script>
+        function checkForm(){
+            var nameBox = document.getElementById('name');
+            var emailBox = document.getElementById('email');
+            var phoneBox = document.getElementById('phone');
+            var dobBox = document.getElementById('gender');
+            var passwordBox = document.getElementById('password');
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        
+            if(nameBox.value === ""){
+                nameBox.style.borderColor = 'red';
+        
+                return false;
+            }else{
+                nameBox.style.borderColor = 'rgba(128, 128, 128, 0.521)';
+            }
+            if(emailBox.value === "" || !emailBox.value.match(validRegex)){
+                emailBox.style.borderColor = 'red';
+                return false;
+            }else{
+                emailBox.style.borderColor = 'rgba(128, 128, 128, 0.521)';
+            }
+            if(phoneBox.value === ""){
+                phoneBox.style.borderColor = 'red';
+                return false;
+            }else{
+                phoneBox.style.borderColor = 'rgba(128, 128, 128, 0.521)';
+            }
+            if(dobBox.value === ""){
+                dobBox.style.borderColor = 'red';
+                return false;
+            }else{
+                dobBox.style.borderColor = 'rgba(128, 128, 128, 0.521)';
+            }
+            if(passwordBox.value === ""){
+                passwordBox.style.borderColor = 'red';
+                return false;
+            }else{
+                passwordBox.style.borderColor = 'rgba(128, 128, 128, 0.521)';
+            }
+            alert("Form Submitted Successfully")
+            nameBox.value = "";
+            emailBox.value = "";
+            phoneBox.value = "";
+            passwordBox.value = "";
+            dobBox.value = "";
+            return true;
+            
+        } 
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 1 Task - Form</title>
-    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+    <style>
+        #form input{
+            border-radius: 5px;
+            height: 40px;
+            width: 400px;
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.521);
+        
+        }
+        #form select{
+            height: 45px;
+            width: 100%;
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            border-width: 1px;
+            border-radius: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.521);
+        }
+        #form label{
+            font-size: 16px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #form #submit{
+            transition-duration: 300ms;
+            transition: ease-in-out;
+            border-radius: 5px;
+            height: 40px;
+            width: 100%;
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: red;
+            border: none;
+            color: white;
+        }
+        #form #submit:hover{
+            transition-duration: 300ms;
+            cursor: pointer;
+            border-radius: 5px;
+            height: 40px;
+            width: 100%;
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: blue;
+            border: none;
+            color: white;
+        }
+        
+        
+        .formclass{
+            height: 90vh;
+           display:flex;
+           align-items: center;
+           justify-content: center;
+        }
+        
+        .form_div{
+        max-width: 600px;
+        width: 100%;
+        margin:auto;
+        height: 75vh;
+        margin: auto;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 0 10px -7px;
+        
+        }
+        
+        
+        
+    </style>
    
         <section class ="formclass">
             <div class="form_div">
